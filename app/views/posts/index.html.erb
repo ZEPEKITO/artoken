@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
+<div class="titleH1 mb-4">
+  <h1 class=>Explore Collectibles</h1>
+</div>
 
-<h1>Posts</h1>
-
-<div id="posts">
+<div id="posts" class="row">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+    <div class="col-md-4 mb-4">
+      <div class="card bg-white display: inline-block">
+        <img class="card-img-top" src="<%= post.image %>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-center text-success cardtitle "> <%= post.title %> </h5>
+          <p class="card-text text-center text-primary fountPaddingCard"><span class=text-success >By </span><%= post.pseudo %> </p>
+          <p class="card-text text-center text-success fountPaddingCard"> <%= post.description %> </p>
+          <p class="card-text text-center text-primary fountPaddingCard"> <%= post.date %> </p>
+          <p>
+            <%= link_to "Show this post", post, class: 'btn btn-primary text-secondary stretched-link fountPaddingCard' %>
+          </p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post p", new_post_path %>
+
+</body>

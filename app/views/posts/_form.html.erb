@@ -1,42 +1,24 @@
-<%= form_with(model: post) do |form| %>
-  <% if post.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<%= simple_form_for post do |f| %>
 
-      <ul>
-        <% post.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+  <div class="row containerFormulair mx-auto gap-3">
+    <div class="col-md-6">
+      <%= f.input :title %>
     </div>
-  <% end %>
-
-  <div>
-    <%= form.label :image, style: "display: block" %>
-    <%= form.text_area :image %>
+    <div class="col-md-6">
+      <%= f.input :pseudo %>
+    </div>
+    <div class="col-md-12">
+      <%= f.input :description %>
+    </div>
+    <div class="col-md-12">
+       <%= f.input :date, as: :date, html5: true %>
+    </div>
+    <div class="col-md-12">
+       <%= f.input :image, as: :string %>
+    </div>
+    <div class="col-md-2 ">
+        <%= f.button :submit, class: 'btn btn-primary' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div>
-    <%= form.label :pseudo, style: "display: block" %>
-    <%= form.text_field :pseudo %>
-  </div>
-
-  <div>
-    <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
-  </div>
-
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

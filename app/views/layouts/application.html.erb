@@ -11,6 +11,23 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="header">
+      <div class="headerLeft">
+        <img class=logoHeader src="https://www.qrious.co.nz/hubfs/AT-logo-White-Crop-1.png" alt="logo">
+        <p class="textblancHeader textHeaderLeft">Hello, welcome to Artoken</p>
+      </div>
+
+      <div class="headerRight">
+        <p class="textblancHeader headerTexteMargin">Add</p>
+        <p class="textblancHeader headerTexteMargin">Like</p>
+        <p class="textblancHeader headerTexteMargin">Home</p>
+      </div>
+    </div>
+
+    <main class="container">
+      <%= yield %>
+    </main>
+
   </body>
 </html>
