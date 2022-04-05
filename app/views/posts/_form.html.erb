@@ -1,23 +1,23 @@
 <%= simple_form_for post do |f| %>
 
-  <div class="row containerFormulair mx-auto gap-3">
+  <div class="row containerFormulair mx-auto">
     <div class="col-md-6">
       <%= f.input :title %>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 marginFormulair">
       <%= f.input :pseudo %>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 marginFormulair">
       <%= f.input :description %>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 marginFormulair">
        <%= f.input :date, as: :date, html5: true %>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 marginFormulair">
        <%= f.input :image, as: :string %>
     </div>
-    <div class="col-md-2 ">
-        <%= f.button :submit, class: 'btn btn-primary' %>
+    <div class="col-md-2 marginFormulair">
+        <%= f.button :submit, class: 'btn btn-primary text-secondary' %>
     </div>
   </div>
 

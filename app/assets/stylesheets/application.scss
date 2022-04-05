@@ -4,6 +4,7 @@ $secondary: white;
 $success: #242527;
 $body-bg: #242527;
 $body-color: white;
+$enable-negative-margins: true;
 
 @import "bootstrap";
 
@@ -12,16 +13,11 @@ $body-color: white;
 //   margin: 0;
 // }
 
-.colorTextBtn {
-  color: white;
-}
-
  .logoHeader {
   width: 12%;
  }
 
 .textblancHeader {
-
   font-weight: bold;
   font-size: 140%;
   font-family: "Poppins";
@@ -41,22 +37,18 @@ $body-color: white;
   justify-content: space-between;
   margin-right: 5%;
 }
-
 .headerLeft {
   margin-left: 5%;
   display: flex;
   align-items: center;
 }
-
 .textHeaderLeft {
   margin-left: 10%;
 }
-
-p {
-  margin: 0%;
+.headerTextMargin {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
-
-
 
 .titleH1 {
   text-align: center;
@@ -117,6 +109,7 @@ h1 {
 .btn {
   border-radius:2em;
   padding: .5em 1.5em;
+  margin-bottom: -20%;
 }
 .btn:hover {
   background-color: #008fef;
@@ -125,4 +118,31 @@ h1 {
 
 .containerFormulair {
   width: 80%;
+}
+.textMargin {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.textWeight {
+  font-size: 85%;
+}
+.marginFormulair {
+  margin-bottom: 2%;
+}
+
+
+.titlePageHome {
+  font-weight: bolder;
+}
+
+.titlePageNew {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 200%;
+  font-family: "Poppins";
+}
+.margin0 {
+  margin: 0%;
 }

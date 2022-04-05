@@ -1,20 +1,20 @@
 <p style="color: green"><%= notice %></p>
 <div class="titleH1 mb-4">
-  <h1 class=>Explore Collectibles</h1>
+  <h1 class=titlePageHome>Explore Collectibles</h1>
 </div>
 
 <div id="posts" class="row">
   <% @posts.each do |post| %>
-    <div class="col-md-4 mb-4">
-      <div class="card bg-white display: inline-block">
+    <div class="col-md-4 mb-5">
+      <div class="card bg-white border-0">
         <img class="card-img-top" src="<%= post.image %>" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title text-center text-success cardtitle "> <%= post.title %> </h5>
-          <p class="card-text text-center text-primary fountPaddingCard"><span class=text-success >By </span><%= post.pseudo %> </p>
-          <p class="card-text text-center text-success fountPaddingCard"> <%= post.description %> </p>
-          <p class="card-text text-center text-primary fountPaddingCard"> <%= post.date %> </p>
-          <p>
-            <%= link_to "Show this post", post, class: 'btn btn-primary text-secondary stretched-link fountPaddingCard' %>
+          <p class="card-text text-center text-primary fountPaddingCard"><span class=text-success>By </span><%= post.pseudo %> </p>
+          <p class="card-text text-center text-success fountPaddingCard textMargin textWeight"> <%= post.description.truncate(138)%> </p>
+          <p class="card-text text-center text-primary fountPaddingCard margin0"> <%= post.date %> </p>
+          <p class="">
+          <%= link_to "Decouvrir plus", post, class: 'btn btn-primary text-secondary stretched-link fountPaddingCard' %>
           </p>
         </div>
       </div>
@@ -22,6 +22,9 @@
   <% end %>
 </div>
 
-<%= link_to "New post p", new_post_path %>
+
+<%= link_to "New post ", new_post_path, class: '' %>
+
+<img src="app/assets/images/akar-icons_circle-plus.svg" alt="">
 
 </body>
